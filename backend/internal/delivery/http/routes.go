@@ -18,5 +18,7 @@ func NewRouter(app *app.Application) http.Handler {
 func clientServerMux(app *app.Application) *http.ServeMux {
 	mux := http.NewServeMux()
 
+	mux.HandleFunc("GET /", MainPageHandler)
+
 	return mux
 }
